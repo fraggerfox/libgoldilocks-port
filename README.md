@@ -6,6 +6,7 @@ FreeBSD Ports script for libgoldilocks.
 You can find libgoldilocks [here][1]
 
 NOTE: This port is not yet available in the FreeBSD Ports tree.
+
 NOTE: This library does not have release yet.
 
 Installation
