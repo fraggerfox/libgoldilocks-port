@@ -3,17 +3,18 @@
 PORTNAME=	libgoldilocks
 PORTVERSION=	0.0.0
 CATEGORIES=	security
-MASTER_SITES=	https://github.com/otrv4/libgoldilocks
+MASTER_SITES=	https://github.com/otrv4/libgoldilocks/
 
 MAINTAINER=	santhosh.raju@gmail.com
-COMMENT=	Library providing the ed448 elliptic curve.
+COMMENT=	Library providing the ed448 elliptic curve
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-GNU_CONFIGURE=	yes
 USES=		autoreconf gmake libtool pkgconfig
 USE_LDCONFIG=	yes
+
+GNU_CONFIGURE=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	otrv4
