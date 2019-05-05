@@ -23,6 +23,8 @@ GH_TAGNAME=	c8d9940
 
 INSTALL_TARGET?=	install-strip
 
+.include <bsd.port.pre.mk>
+
 # Fixes build failures for FreeBSD 13.0-CURRENT (i386)
 # Without this it fails with "error: loop not unrolled" optimization
 # attempt by the compiler.
@@ -31,4 +33,4 @@ INSTALL_TARGET?=	install-strip
 CFLAGS+=	-Wno-error=pass-failed
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
