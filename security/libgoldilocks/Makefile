@@ -11,8 +11,6 @@ COMMENT=	Library providing the ed448 elliptic curve
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BROKEN_i386=	fails to compile: src/include/arch_x86_64/arch_intrinsics.h:14:19: error: unknown type name '__uint128_t'
-
 USES=		autoreconf gmake libtool pkgconfig
 USE_LDCONFIG=	yes
 
