@@ -23,4 +23,12 @@ GH_TAGNAME=	c8d9940
 
 INSTALL_TARGET?=	install-strip
 
+# Fixes build failures for FreeBSD 13.0-CURRENT (i386)
+# Without this it fails with "error: loop not unrolled" optimization
+# attempt by the compiler.
+# XXX: Is this an important optimization? Ask the upstream
+.if ${OPSYS} == FreeBSD && ${ARCH} == i386 && ${OSVERSION} >= 1300022
+CFLAGS+=	-Wno-error=pass-failed
+.endif
+
 .include <bsd.port.mk>

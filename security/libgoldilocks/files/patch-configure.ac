@@ -1,3 +1,11 @@
+This is required to enable builds in i386 architecture.
+
+The upstream as of now "hardcodes" amd64 (x86_64) as the only build option.
+
+Now it does a host CPU check and picks the architecture accordingly.
+
+XXX: Should we add arm / aarch64? Since the library has the means to
+support it?
 --- configure.ac.orig	2019-05-05 14:33:33 UTC
 +++ configure.ac
 @@ -12,6 +12,18 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects
