@@ -1,0 +1,21 @@
+--- configure.ac.orig	2019-05-05 14:33:33 UTC
++++ configure.ac
+@@ -12,6 +12,18 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects
+ AM_PROG_AR
+ LT_INIT
+ 
++dnl Check the machine architecture.
++AC_CANONICAL_HOST
++
++AS_CASE([$host_cpu],
++  [i?86], [ARCH_NAME=arch_32],
++  [x86_64], [ARCH_NAME=arch_x86_64],
++  [amd64], [ARCH_NAME=arch_x86_64],
++  [AC_MSG_ERROR("No assembler code for CPU $host_cpu")]
++)
++
++AC_SUBST([ARCH_NAME])
++
+ dnl Checks for programs.
+ AC_PROG_CXX
+ AC_PROG_CC
