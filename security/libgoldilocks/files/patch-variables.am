@@ -3,6 +3,7 @@ This is required to enable builds in i386 architecture.
 The upstream as of now "hardcodes" amd64 (x86_64) as the only build option.
 
 ARCH_NAME is now set from configure.ac
+
 --- variables.am.orig	2019-05-05 14:34:00 UTC
 +++ variables.am
 @@ -1,5 +1,3 @@
