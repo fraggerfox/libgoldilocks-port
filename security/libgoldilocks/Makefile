@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libgoldilocks
-PORTVERSION=	0.0.0
+DISTVERSION=	g20190311
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/otrv4/libgoldilocks/
 
