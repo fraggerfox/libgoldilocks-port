@@ -1,10 +1,12 @@
-This is required to enable builds in i386 architecture.
+This is required to enable builds in architectures other than amd64
+(x86_64). Currently supports i386/armv6/armv7/aarch64.
 
-The upstream as of now "hardcodes" amd64 (x86_64) as the only build option.
+The upstream as of now "hardcodes" amd64 (x86_64) as the only build
+option.
 
 ARCH_NAME is now set from configure.ac
 
---- src/Makefile.am.orig	2019-05-05 14:33:50 UTC
+--- src/Makefile.am.orig	2019-05-20 23:21:00.488082214 +0000
 +++ src/Makefile.am
 @@ -4,7 +4,7 @@ noinst_PROGRAMS = goldilocks_gen_tables
  
