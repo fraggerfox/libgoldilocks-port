@@ -1,8 +1,10 @@
 # $FreeBSD$
 
+# WIP Package, remove / replace all wip instances before submission
+
 PORTNAME=	libgoldilocks
 DISTVERSION=	g20190311
-CATEGORIES=	security
+CATEGORIES=	wip security
 MASTER_SITES=	https://github.com/otrv4/libgoldilocks/
 
 MAINTAINER=	santhosh.raju@gmail.com
