@@ -7,7 +7,7 @@ DISTVERSION=	g20190311
 CATEGORIES=	wip security
 MASTER_SITES=	https://github.com/otrv4/libgoldilocks/
 
-MAINTAINER=	santhosh.raju@gmail.com
+MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Library providing the ed448 elliptic curve
 
 LICENSE=	MIT
