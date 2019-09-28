@@ -8,9 +8,9 @@ Now it does a host CPU check and picks the architecture accordingly.
 
 XXX: What is the usecase of arch_neon?
 
---- configure.ac.orig	2019-03-11 19:42:59.000000000 +0000
+--- configure.ac.orig	2019-03-11 19:42:59 UTC
 +++ configure.ac
-@@ -12,6 +12,23 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign 
+@@ -12,6 +12,23 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects
  AM_PROG_AR
  LT_INIT
  

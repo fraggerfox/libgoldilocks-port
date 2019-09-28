@@ -6,7 +6,7 @@ option.
 
 ARCH_NAME is now set from configure.ac
 
---- variables.am.orig	2019-03-11 19:42:59.000000000 +0000
+--- variables.am.orig	2019-03-11 19:42:59 UTC
 +++ variables.am
 @@ -1,5 +1,3 @@
 -ARCH_NAME = arch_x86_64
@@ -14,7 +14,7 @@ ARCH_NAME is now set from configure.ac
  LANGFLAGS = -std=c99 -fno-strict-aliasing
  
  WARNFLAGS = -pedantic -Wall -Wextra -Werror -Wunreachable-code \
-@@ -15,8 +13,10 @@ INCFLAGS += -I$(top_srcdir)/src/include/
+@@ -15,8 +13,10 @@ INCFLAGS += -I$(top_srcdir)/src/include/$(ARCH_NAME)
  
  OFLAGS ?= -O2
  
