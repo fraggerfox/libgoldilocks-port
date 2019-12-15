@@ -31,7 +31,7 @@ INSTALL_TARGET?=	install-strip
 # Without this it fails with "error: loop not unrolled" optimization
 # attempt by the compiler.
 # XXX: Is this an important optimization? Ask the upstream
-.if ${OPSYS} == FreeBSD && ${ARCH} == i386 && ${OSVERSION} >= 1300022
+.if ${OPSYS} == FreeBSD && ${ARCH} == i386 && ${OSVERSION}
 CFLAGS+=	-Wno-error=pass-failed
 .endif
 
