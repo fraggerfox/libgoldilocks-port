@@ -4,7 +4,7 @@ This is required to enable builds in architectures other than amd64
 The upstream as of now "hardcodes" amd64 (x86_64) as the only build
 option.
 
-ARCH_NAME is now set from configure.ac
+ARCH_DIR is now set from configure.ac
 
 --- src/Makefile.am.orig	2019-03-11 19:42:59 UTC
 +++ src/Makefile.am
@@ -13,7 +13,7 @@ ARCH_NAME is now set from configure.ac
  goldilocks_gen_tables_SOURCES = utils.c \
  					   goldilocks_gen_tables.c \
 -					   arch_x86_64/f_impl.c \
-+					   $(ARCH_NAME)/f_impl.c \
++					   $(ARCH_DIR)/f_impl.c \
  	       			   f_arithmetic.c \
  	       			   f_generic.c \
  	      			   goldilocks.c \
@@ -22,7 +22,7 @@ ARCH_NAME is now set from configure.ac
  		      shake.c \
  		      spongerng.c \
 -		      arch_x86_64/f_impl.c \
-+		      $(ARCH_NAME)/f_impl.c \
++		      $(ARCH_DIR)/f_impl.c \
  		      f_arithmetic.c \
  		      f_generic.c \
  		      goldilocks.c \
