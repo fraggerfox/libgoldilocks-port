@@ -3,7 +3,7 @@
 # WIP Package, remove / replace all wip instances before submission
 
 PORTNAME=	libgoldilocks
-DISTVERSION=	g20191204
+DISTVERSION=	g20200107
 CATEGORIES=	wip security
 MASTER_SITES=	https://github.com/otrv4/libgoldilocks/
 
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	otrv4
 GH_PROJECT=	libgoldilocks
-GH_TAGNAME=	be08957
+GH_TAGNAME=	020ded7
 
 INSTALL_TARGET?=	install-strip
 
@@ -31,7 +31,7 @@ INSTALL_TARGET?=	install-strip
 # Without this it fails with "error: loop not unrolled" optimization
 # attempt by the compiler.
 # XXX: Is this an important optimization? Ask the upstream
-.if ${OPSYS} == FreeBSD && ${ARCH} == i386 && ${OSVERSION}
+.if ${OPSYS} == FreeBSD && ${ARCH} == i386
 CFLAGS+=	-Wno-error=pass-failed
 .endif
 
