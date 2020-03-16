@@ -3,7 +3,7 @@
 # WIP Package, remove / replace all wip instances before submission
 
 PORTNAME=	libgoldilocks
-DISTVERSION=	g20200315
+DISTVERSION=	g20200316
 CATEGORIES=	wip security
 MASTER_SITES=	https://github.com/otrv4/libgoldilocks/
 
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	otrv4
 GH_PROJECT=	libgoldilocks
-GH_TAGNAME=	fa5fdf7
+GH_TAGNAME=	d07cb5b
 
 INSTALL_TARGET?=	install-strip
 
