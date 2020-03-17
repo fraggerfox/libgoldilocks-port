@@ -2,7 +2,7 @@ Do not use uname(1) to detect architecture.
 
 ARCH_DEF is now set from variables.am
 
---- Makefile.custom.orig	2020-03-16 08:25:44 UTC
+--- Makefile.custom.orig	2020-03-16 08:25:44.000000000 +0000
 +++ Makefile.custom
 @@ -2,30 +2,6 @@
  # Copyright (c) 2018 the libgoldilocks contributors.

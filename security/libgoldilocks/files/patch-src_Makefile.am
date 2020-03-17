@@ -1,27 +1,20 @@
 Do a better refactor of upstream's arch detection. Instead of blindly
 copy pasting repeated code.
 
-Currently supports i386/armv6/armv7/aarch64.
+Currently supports i386/amd64/armv6/armv7(with neon)/aarch64.
 
 ARCH_DIR is now set from configure.ac
 
---- src/Makefile.am.orig	2020-03-16 08:25:44 UTC
+--- src/Makefile.am.orig	2020-03-16 08:25:44.000000000 +0000
 +++ src/Makefile.am
-@@ -2,26 +2,14 @@ include $(top_srcdir)/variables.am
+@@ -2,25 +2,13 @@ include $(top_srcdir)/variables.am
  
  noinst_PROGRAMS = goldilocks_gen_tables
  
 -if X86
 -goldilocks_gen_tables_SOURCES = utils.c goldilocks_gen_tables.c arch_x86_64/f_impl.c f_arithmetic.c f_generic.c goldilocks.c scalar.c
 -endif
-+goldilocks_gen_tables_SOURCES = utils.c \
-+				goldilocks_gen_tables.c \
-+				${ARCH_DIR}/f_impl.c \
-+				f_arithmetic.c \
-+				f_generic.c \
-+				goldilocks.c \
-+				scalar.c
- 
+-
 -if ARCH_64
 -goldilocks_gen_tables_SOURCES = utils.c goldilocks_gen_tables.c arch_ref64/f_impl.c f_arithmetic.c f_generic.c goldilocks.c scalar.c
 -endif
@@ -37,11 +30,17 @@ ARCH_DIR is now set from configure.ac
 -if ARCH_32
 -goldilocks_gen_tables_SOURCES = utils.c goldilocks_gen_tables.c arch_32/f_impl.c f_arithmetic.c f_generic.c goldilocks.c scalar.c
 -endif
--
++goldilocks_gen_tables_SOURCES = utils.c \
++				goldilocks_gen_tables.c \
++				${ARCH_DIR}/f_impl.c \
++				f_arithmetic.c \
++				f_generic.c \
++				goldilocks.c \
++				scalar.c
+ 
  goldilocks_gen_tables_CFLAGS = $(AM_CFLAGS) $(LANGFLAGS) $(WARNFLAGS) $(INCFLAGS) $(INCFLAGS_448) $(OFLAGS) $(ARCHFLAGS) $(GENFLAGS) $(XCFLAGS)
  goldilocks_gen_tables_LDFLAGS = $(AM_LDFLAGS) $(XLDFLAGS)
- 
-@@ -31,25 +19,17 @@ GEN/goldilocks_tables.c: goldilocks_gen_tables
+@@ -31,25 +19,17 @@ GEN/goldilocks_tables.c: goldilocks_gen_
  
  lib_LTLIBRARIES = libgoldilocks.la
  
